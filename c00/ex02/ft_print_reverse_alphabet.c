@@ -6,19 +6,18 @@
 /*   By: yboulfaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/07 10:27:16 by yboulfaf          #+#    #+#             */
-/*   Updated: 2021/08/07 10:28:03 by yboulfaf         ###   ########.fr       */
+/*   Updated: 2021/08/08 19:51:02 by yboulfaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
 void	ft_print_reverse_alphabet(void)
 {
 	char	c;
 
 	c = 'z';
-	while (c <= 'a')
+	while (c >= 'a')
 	{
-		write (1, &c, 1)
+		write (1, &c, 1);
 		c--;
 	}
 }
