@@ -6,10 +6,10 @@
 /*   By: yboulfaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 14:55:28 by yboulfaf          #+#    #+#             */
-/*   Updated: 2021/08/09 14:55:36 by yboulfaf         ###   ########.fr       */
+/*   Updated: 2021/08/09 18:51:32 by yboulfaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include <unistd.h>
 void	ft_is_negative(int n)
 {	
 	if (n < 0)

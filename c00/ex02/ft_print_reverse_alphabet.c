@@ -6,10 +6,10 @@
 /*   By: yboulfaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/07 10:27:16 by yboulfaf          #+#    #+#             */
-/*   Updated: 2021/08/08 19:51:02 by yboulfaf         ###   ########.fr       */
+/*   Updated: 2021/08/09 18:37:44 by yboulfaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include <unistd.h>
 void	ft_print_reverse_alphabet(void)
 {
 	char	c;
