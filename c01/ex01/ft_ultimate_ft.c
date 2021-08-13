@@ -6,10 +6,9 @@
 /*   By: yboulfaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 09:20:24 by yboulfaf          #+#    #+#             */
-/*   Updated: 2021/08/11 10:31:45 by yboulfaf         ###   ########.fr       */
+/*   Updated: 2021/08/13 10:42:55 by yboulfaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 #include <unistd.h>
 void	ft_ultimate_ft(int *********nbr)
 {
