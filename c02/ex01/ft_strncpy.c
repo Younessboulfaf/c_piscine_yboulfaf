@@ -6,11 +6,10 @@
 /*   By: yboulfaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/14 16:57:48 by yboulfaf          #+#    #+#             */
-/*   Updated: 2021/08/14 18:12:43 by yboulfaf         ###   ########.fr       */
+/*   Updated: 2021/08/18 10:15:22 by yboulfaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int	i;

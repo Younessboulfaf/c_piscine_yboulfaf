@@ -6,10 +6,9 @@
 /*   By: yboulfaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/14 19:33:15 by yboulfaf          #+#    #+#             */
-/*   Updated: 2021/08/15 11:56:02 by yboulfaf         ###   ########.fr       */
+/*   Updated: 2021/08/18 10:15:41 by yboulfaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 int	ft_str_is_alpha(char *str)
 {
 	int	i;

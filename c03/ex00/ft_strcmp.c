@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yboulfaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/15 15:26:13 by yboulfaf          #+#    #+#             */
-/*   Updated: 2021/08/18 10:16:37 by yboulfaf         ###   ########.fr       */
+/*   Created: 2021/08/19 10:08:26 by yboulfaf          #+#    #+#             */
+/*   Updated: 2021/08/19 13:46:18 by yboulfaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_printable(char *str)
+int	ft_strcmp(char *s1, char *s2)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (s1[i] || s2[i])
 	{
-		if (str[i] < 32 || str[i] == 127)
-		{
-			return (0);
-		}
-		i++;
+		if (s1[i] == s2[i])
+			i++;
+		else if
+		(s1[i] != s2[i])
+			return (s1[i] - s2[i]);
 	}
-	return (1);
+	return (0);
 }

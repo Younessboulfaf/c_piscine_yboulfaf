@@ -6,12 +6,10 @@
 /*   By: yboulfaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/14 14:54:43 by yboulfaf          #+#    #+#             */
-/*   Updated: 2021/08/14 14:56:03 by yboulfaf         ###   ########.fr       */
+/*   Updated: 2021/08/18 10:19:10 by yboulfaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
 char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;

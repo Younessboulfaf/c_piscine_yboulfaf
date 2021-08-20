@@ -6,11 +6,10 @@
 /*   By: yboulfaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 18:20:04 by yboulfaf          #+#    #+#             */
-/*   Updated: 2021/08/15 18:43:31 by yboulfaf         ###   ########.fr       */
+/*   Updated: 2021/08/18 10:16:57 by yboulfaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 char	*ft_strupcase(char *str)
 {
 	int	i;

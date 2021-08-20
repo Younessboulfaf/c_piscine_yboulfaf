@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yboulfaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/15 15:26:13 by yboulfaf          #+#    #+#             */
-/*   Updated: 2021/08/18 10:16:37 by yboulfaf         ###   ########.fr       */
+/*   Created: 2021/08/16 12:19:21 by yboulfaf          #+#    #+#             */
+/*   Updated: 2021/08/19 14:57:01 by yboulfaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_printable(char *str)
+char	*ft_cap(char *str)
 {
 	int	i;
+	int	b;
 
+	b = 1;
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] < 32 || str[i] == 127)
+		if ((str[i] >= 'a' && str[i] <= 'z')
+			|| (str[i] >= 'A' && str[i] <= 'Z')
+			|| (str[i] >= '0' && str[i] <= '9'))
 		{
-			return (0);
+			if (!b && str[i] >= 'A' && str[i] <= 'Z')
+				str [i] = str[i] + 32;
+			else if (b && str[i] >= 'a' && str[i] <= 'z')
+				str[i] = str[i] - 32;
+			b = 0;
 		}
+		else
+			b++;
 		i++;
 	}
-	return (1);
+	return (str);
 }

@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yboulfaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/15 15:26:13 by yboulfaf          #+#    #+#             */
-/*   Updated: 2021/08/18 10:16:37 by yboulfaf         ###   ########.fr       */
+/*   Created: 2021/08/20 10:13:20 by yboulfaf          #+#    #+#             */
+/*   Updated: 2021/08/20 13:17:00 by yboulfaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	ft_str_is_printable(char *str)
+char ft_strlen(char *s)
 {
-	int	i;
+	int i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}
+
+
+char	*ft_strcat(char *dest, char *src)
+{
+	int	i;
+	int n;
+
+	n = 0;
+	i = ft_strlen(dest);
+	while (src[n] != '\0')
 	{
-		if (str[i] < 32 || str[i] == 127)
-		{
-			return (0);
-		}
+		dest[i] = src[n];
+		n++;
 		i++;
 	}
-	return (1);
+	dest[i] = '\0';
+	return (dest);
 }

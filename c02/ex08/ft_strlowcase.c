@@ -6,11 +6,10 @@
 /*   By: yboulfaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 09:37:52 by yboulfaf          #+#    #+#             */
-/*   Updated: 2021/08/16 10:52:01 by yboulfaf         ###   ########.fr       */
+/*   Updated: 2021/08/18 10:17:14 by yboulfaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 char	*ft_strlowcase(char *str)
 {
 	int	i;

@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yboulfaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/15 15:26:13 by yboulfaf          #+#    #+#             */
-/*   Updated: 2021/08/18 10:16:37 by yboulfaf         ###   ########.fr       */
+/*   Created: 2021/08/19 13:51:35 by yboulfaf          #+#    #+#             */
+/*   Updated: 2021/08/20 09:58:20 by yboulfaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_printable(char *str)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] < 32 || str[i] == 127)
-		{
-			return (0);
-		}
+	while (s1[i] && s2[i] && (s1[i] == s2[i]) && i < n - 1)
 		i++;
-	}
-	return (1);
+	return (s1[i] - s2[i]);
 }

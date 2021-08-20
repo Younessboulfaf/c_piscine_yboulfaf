@@ -6,11 +6,10 @@
 /*   By: yboulfaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 13:10:35 by yboulfaf          #+#    #+#             */
-/*   Updated: 2021/08/15 13:58:53 by yboulfaf         ###   ########.fr       */
+/*   Updated: 2021/08/18 10:16:06 by yboulfaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 int	ft_str_is_lowercase(char *str)
 {
 	int	i;

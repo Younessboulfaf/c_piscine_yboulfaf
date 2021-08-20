@@ -6,11 +6,10 @@
 /*   By: yboulfaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/15 14:11:42 by yboulfaf          #+#    #+#             */
-/*   Updated: 2021/08/15 14:11:45 by yboulfaf         ###   ########.fr       */
+/*   Updated: 2021/08/18 10:16:20 by yboulfaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 int	ft_str_is_uppercase(char *str)
 {
 	int	i;

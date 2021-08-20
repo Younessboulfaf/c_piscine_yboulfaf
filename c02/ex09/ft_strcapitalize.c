@@ -6,11 +6,10 @@
 /*   By: yboulfaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/16 12:19:21 by yboulfaf          #+#    #+#             */
-/*   Updated: 2021/08/16 14:07:33 by yboulfaf         ###   ########.fr       */
+/*   Updated: 2021/08/18 10:17:53 by yboulfaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 char	*ft_strcapitalize(char *str)
 {
 	int	i;
