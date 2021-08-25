@@ -1,37 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yboulfaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/20 10:13:20 by yboulfaf          #+#    #+#             */
-/*   Updated: 2021/08/21 10:56:44 by yboulfaf         ###   ########.fr       */
+/*   Created: 2021/08/22 10:12:34 by yboulfaf          #+#    #+#             */
+/*   Updated: 2021/08/22 10:51:48 by yboulfaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-char	ft_strlen(char *s)
-{
-	int	i;
 
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
+int	cmp(char *s1, char *s2)
+{
+	while (*s1 && *s2)
+	{
+		if (*s1 != *s2)
+			return (0);
+		s1++;
+		s2++;
+	}
+	return (*s2 == '\0');
 }
 
-char	*ft_strcat(char *dest, char *src)
+char	*ft_strstr(char *str, char *to_find)
 {
-	int	i;
-	int	n;
-
-	n = 0;
-	i = ft_strlen(dest);
-	while (src[n] != '\0')
+	if (*to_find == '\0')
+		return (str);
+	while (*str != '\0')
 	{
-		dest[i] = src[n];
-		n++;
-		i++;
+		if ((*str == *to_find) && cmp(str, to_find))
+			return (str);
+		str++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (0);
 }

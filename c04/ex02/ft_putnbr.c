@@ -1,37 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yboulfaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/20 10:13:20 by yboulfaf          #+#    #+#             */
-/*   Updated: 2021/08/21 10:56:44 by yboulfaf         ###   ########.fr       */
+/*   Created: 2021/08/23 16:49:53 by yboulfaf          #+#    #+#             */
+/*   Updated: 2021/08/25 15:52:32 by yboulfaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-char	ft_strlen(char *s)
-{
-	int	i;
 
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
+#include <unistd.h>
+void	ft_putchar(char c)
+{
+	write (1, &c, 1);
 }
 
-char	*ft_strcat(char *dest, char *src)
+void	ft_putnbr(int nb)
 {
-	int	i;
-	int	n;
-
-	n = 0;
-	i = ft_strlen(dest);
-	while (src[n] != '\0')
+	if (nb == -2147483648)
 	{
-		dest[i] = src[n];
-		n++;
-		i++;
+		write (1, "-2147483648", 11);
+		return ;
 	}
-	dest[i] = '\0';
-	return (dest);
+	if (nb < 0)
+	{
+		nb = -nb;
+		ft_putchar('-');
+	}
+	if (nb < 10)
+	{
+		ft_putchar(nb + 48);
+	}
+	else
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
 }

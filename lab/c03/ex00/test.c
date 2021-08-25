@@ -4,6 +4,6 @@
 int main ()
 {
 	char s1[10] = "hello";
-	char s2[10] = "hello";
+	char s2[10] = "hell";
 	printf("%d" , ft_strcmp(s1 ,s2));
 }

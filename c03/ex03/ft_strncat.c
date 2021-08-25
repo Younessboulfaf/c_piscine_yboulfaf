@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yboulfaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/20 10:13:20 by yboulfaf          #+#    #+#             */
-/*   Updated: 2021/08/21 10:56:44 by yboulfaf         ###   ########.fr       */
+/*   Created: 2021/08/21 16:03:46 by yboulfaf          #+#    #+#             */
+/*   Updated: 2021/08/21 17:28:32 by yboulfaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 char	ft_strlen(char *s)
@@ -19,14 +19,15 @@ char	ft_strlen(char *s)
 	return (i);
 }
 
-char	*ft_strcat(char *dest, char *src)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
+
 {
 	int	i;
 	int	n;
 
 	n = 0;
 	i = ft_strlen(dest);
-	while (src[n] != '\0')
+	while (src[n] != '\0' && n < nb)
 	{
 		dest[i] = src[n];
 		n++;

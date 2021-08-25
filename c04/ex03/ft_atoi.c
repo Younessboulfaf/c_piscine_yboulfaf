@@ -1,37 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yboulfaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/20 10:13:20 by yboulfaf          #+#    #+#             */
-/*   Updated: 2021/08/21 10:56:44 by yboulfaf         ###   ########.fr       */
+/*   Created: 2021/08/25 09:50:08 by yboulfaf          #+#    #+#             */
+/*   Updated: 2021/08/25 15:54:21 by yboulfaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-char	ft_strlen(char *s)
+
+int	ft_atoi(char *str)
 {
+	int	r;
+	int	s;
 	int	i;
 
+	r = 0;
+	s = 1;
 	i = 0;
-	while (s[i] != '\0')
+	while (str[i] && (str[i] >= 0 && str[i] <= 32))
 		i++;
-	return (i);
-}
-
-char	*ft_strcat(char *dest, char *src)
-{
-	int	i;
-	int	n;
-
-	n = 0;
-	i = ft_strlen(dest);
-	while (src[n] != '\0')
+	while (str[i] && (str[i] == '-' || str[i] == '+' ))
 	{
-		dest[i] = src[n];
-		n++;
+		if (str[i] == '-')
+			s = s * (-1);
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	while (str[i] && (str[i] >= '0' && str[i] <= '9'))
+	{
+		r = r * 10 + (str[i] - '0');
+		i++;
+	}
+	return (s * r);
 }

@@ -1,37 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yboulfaf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/20 10:13:20 by yboulfaf          #+#    #+#             */
-/*   Updated: 2021/08/21 10:56:44 by yboulfaf         ###   ########.fr       */
+/*   Created: 2021/08/23 09:45:35 by yboulfaf          #+#    #+#             */
+/*   Updated: 2021/08/23 17:57:06 by yboulfaf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-char	ft_strlen(char *s)
+
+int	ft_strlen(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
-
-char	*ft_strcat(char *dest, char *src)
-{
-	int	i;
-	int	n;
-
-	n = 0;
-	i = ft_strlen(dest);
-	while (src[n] != '\0')
+	while (str[i] != '\0')
 	{
-		dest[i] = src[n];
-		n++;
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (i);
 }

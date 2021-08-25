@@ -2,8 +2,7 @@
 #include "/Users/yboulfaf/code/c03/ex02/ft_strcat.c"
 int main ()
 {
-	char src[] = "youness";
-	char dest[] = "hello";
-	printf ("%s" , ft_strcat(src , dest));
-
+	char dest[15] = "Hello ";
+	char src[15] = "youness";
+	printf ("%s" , ft_strcat(dest , src));
 }
